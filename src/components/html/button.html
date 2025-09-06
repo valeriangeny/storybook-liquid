@@ -1,0 +1,87 @@
+<!-- Pure HTML Button Component -->
+<button class="html-btn html-btn--primary html-btn--medium" type="button">
+  Add to Cart
+</button>
+
+<style>
+/* Pure HTML Button Styles */
+.html-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.html-btn:focus {
+  outline: 2px solid #005bd3;
+  outline-offset: 2px;
+}
+
+/* Button Variants */
+.html-btn--primary {
+  background-color: #008060;
+  color: white;
+}
+
+.html-btn--primary:hover:not(:disabled) {
+  background-color: #004c3f;
+}
+
+.html-btn--secondary {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.html-btn--secondary:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.html-btn--outline {
+  background-color: transparent;
+  color: #008060;
+  border: 1px solid #008060;
+}
+
+.html-btn--outline:hover:not(:disabled) {
+  background-color: #008060;
+  color: white;
+}
+
+/* Button Sizes */
+.html-btn--small {
+  padding: 6px 12px;
+  font-size: 12px;
+  height: 32px;
+}
+
+.html-btn--medium {
+  padding: 8px 16px;
+  font-size: 14px;
+  height: 40px;
+}
+
+.html-btn--large {
+  padding: 12px 24px;
+  font-size: 16px;
+  height: 48px;
+}
+
+/* Button States */
+.html-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.html-btn--full-width {
+  width: 100%;
+}
+</style>

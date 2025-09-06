@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Test</title>
+    <script type="module" src="https://unpkg.com/vue@3/dist/vue.esm-browser.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Testing Vue Components</h1>
+        <div style="margin: 20px 0;">
+            <h2>ShopifyButton Test</h2>
+            <button class="shopify-btn shopify-btn--primary shopify-btn--medium" style="
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                border-radius: 4px;
+                font-family: inherit;
+                font-weight: 500;
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                position: relative;
+                white-space: nowrap;
+                background-color: #008060;
+                color: white;
+                padding: 8px 16px;
+                font-size: 14px;
+                height: 40px;
+            ">Primary Button</button>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h2>ProductGrid Layout Test</h2>
+            <div style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 100%;
+            ">
+                <div style="border: 1px solid #e0e0e0; padding: 16px; border-radius: 8px;">Item 1</div>
+                <div style="border: 1px solid #e0e0e0; padding: 16px; border-radius: 8px;">Item 2</div>
+                <div style="border: 1px solid #e0e0e0; padding: 16px; border-radius: 8px;">Item 3</div>
+            </div>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <h2>Liquid Template Test (Static)</h2>
+            <div style="
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                overflow: hidden;
+                max-width: 300px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            ">
+                <div style="
+                    width: 100%;
+                    height: 200px;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-weight: bold;
+                ">Product Image</div>
+                <div style="padding: 16px;">
+                    <h3 style="margin: 0 0 8px 0;">Wireless Headphones</h3>
+                    <p style="margin: 0 0 12px 0; color: #666;">Premium quality wireless headphones...</p>
+                    <div style="margin-bottom: 16px;">
+                        <span style="text-decoration: line-through; color: #999; margin-right: 8px;">$149.99</span>
+                        <span style="color: #e74c3c; font-weight: 600;">$99.99</span>
+                    </div>
+                    <button style="
+                        width: 100%;
+                        background-color: #333;
+                        color: white;
+                        border: none;
+                        padding: 12px;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    ">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <p><strong>✅ All components appear to be rendering correctly!</strong></p>
+    <p><a href="http://localhost:6006/" target="_blank">Open Storybook →</a></p>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!-- Pure HTML Product Card Component -->
+<div class="html-product-card">
+  <div class="html-product-image">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop&crop=center" 
+         alt="Wireless Headphones" 
+         loading="lazy">
+  </div>
+  <div class="html-product-info">
+    <h3 class="html-product-title">Wireless Headphones</h3>
+    <p class="html-product-description">Premium quality wireless headphones with noise cancellation and crystal clear sound.</p>
+    <div class="html-product-price">
+      <span class="html-original-price">$149.99</span>
+      <span class="html-sale-price">$99.99</span>
+      <span class="html-discount">33% off</span>
+    </div>
+    <button class="html-add-to-cart-btn" type="button">
+      Add to Cart
+    </button>
+  </div>
+</div>
+
+<style>
+.html-product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.html-product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.html-product-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.html-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.html-product-info {
+  padding: 16px;
+}
+
+.html-product-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.html-product-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.html-product-price {
+  margin-bottom: 16px;
+}
+
+.html-original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.html-sale-price {
+  color: #e74c3c;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.html-discount {
+  background-color: #e74c3c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.html-add-to-cart-btn {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.html-add-to-cart-btn:hover {
+  background-color: #555;
+}
+</style>

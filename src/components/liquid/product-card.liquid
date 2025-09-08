@@ -84,7 +84,7 @@
 
 .product-image-container {
   position: relative;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: var(--token-background-gradient-product);
 }
 
 .bestseller-badge {
@@ -224,7 +224,7 @@
 }
 
 .star.filled {
-  color: #fbbf24;
+  color: var(--token-color-rating);
 }
 
 .star.empty {
@@ -320,96 +320,4 @@
   transform: translateY(0);
 }
 
-/* Theme-specific adjustments */
-[data-theme="pca"] .product-card {
-  border-radius: var(--token-radius-sm);
-  max-width: 200px;
-  font-size: var(--token-text-size-xs);
-}
-
-[data-theme="pca"] .product-title {
-  font-size: var(--token-text-size-sm);
-  line-height: var(--token-line-height-tight);
-  margin-bottom: var(--token-space-xs);
-}
-
-[data-theme="pca"] .product-description {
-  font-size: var(--token-text-size-xs);
-  margin-bottom: var(--token-space-sm);
-}
-
-[data-theme="pca"] .add-to-cart-btn {
-  border-radius: var(--token-radius-sm);
-  text-transform: none;
-  letter-spacing: normal;
-  font-weight: var(--token-font-weight-medium);
-  font-size: var(--token-text-size-xs);
-  padding: var(--token-space-xs) var(--token-space-sm);
-}
-
-[data-theme="pca"] .bestseller-badge,
-[data-theme="pca"] .discount-badge {
-  border-radius: var(--token-radius-sm);
-  font-size: 0.5rem;
-  padding: var(--token-space-xs);
-}
-
-[data-theme="pca"] .product-info {
-  padding: var(--token-space-sm);
-  gap: var(--token-space-xs);
-}
-
-[data-theme="pca"] .product-image {
-  height: 160px;
-  padding: var(--token-space-xs);
-}
-
-[data-theme="shopsmiles"] .product-card {
-  border-radius: var(--token-radius-lg);
-  max-width: 420px;
-  font-size: var(--token-text-size-lg);
-}
-
-[data-theme="shopsmiles"] .product-title {
-  font-size: var(--token-text-size-xl);
-  font-weight: var(--token-font-weight-bold);
-}
-
-[data-theme="shopsmiles"] .product-description {
-  font-size: var(--token-text-size-base);
-  margin-bottom: var(--token-space-lg);
-}
-
-[data-theme="shopsmiles"] .add-to-cart-btn {
-  border-radius: var(--token-radius-md);
-  font-size: var(--token-text-size-lg);
-  font-weight: var(--token-font-weight-bold);
-  padding: var(--token-space-lg) var(--token-space-xl);
-  text-transform: uppercase;
-}
-
-[data-theme="shopsmiles"] .bestseller-badge {
-  background: linear-gradient(135deg, var(--token-color-primary) 0%, var(--token-color-primary-dark) 100%);
-  border-radius: var(--token-radius-full);
-  padding: var(--token-space-sm) var(--token-space-md);
-  font-size: var(--token-text-size-sm);
-  font-weight: var(--token-font-weight-bold);
-}
-
-[data-theme="shopsmiles"] .discount-badge {
-  border-radius: var(--token-radius-lg);
-  font-size: var(--token-text-size-sm);
-  padding: var(--token-space-sm) var(--token-space-lg);
-  font-weight: var(--token-font-weight-bold);
-}
-
-[data-theme="shopsmiles"] .product-info {
-  padding: var(--token-space-xl);
-  gap: var(--token-space-md);
-}
-
-[data-theme="shopsmiles"] .product-image {
-  height: 400px;
-  padding: var(--token-space-lg);
-}
 </style>

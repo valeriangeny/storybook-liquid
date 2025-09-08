@@ -41,6 +41,12 @@
   --token-color-warning: var(--primitive-warning);
   --token-color-info: var(--primitive-info);
   
+  /* Rating colors */
+  --token-color-rating: var(--primitive-warning);
+  
+  /* Background gradients */
+  --token-background-gradient-product: var(--primitive-gradient-subtle);
+  
   /* Typography - Semantic naming */
   --token-font-family-primary: var(--primitive-font-primary);
   --token-font-family-secondary: var(--primitive-font-secondary);

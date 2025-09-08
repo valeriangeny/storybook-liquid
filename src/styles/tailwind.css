@@ -1,0 +1,444 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Universal Design Tokens
+ * Semantic token names used by all themes
+ */
+:root {
+  /* === SEMANTIC DESIGN TOKENS === */
+  
+  /* Colors - Semantic naming */
+  --token-color-primary: var(--primitive-primary);
+  --token-color-primary-light: var(--primitive-primary-light);
+  --token-color-primary-dark: var(--primitive-primary-dark);
+  
+  --token-color-secondary: var(--primitive-secondary);
+  --token-color-secondary-light: var(--primitive-secondary-light);
+  --token-color-secondary-dark: var(--primitive-secondary-dark);
+  
+  --token-color-accent: var(--primitive-accent);
+  --token-color-accent-light: var(--primitive-accent-light);
+  --token-color-accent-dark: var(--primitive-accent-dark);
+  
+  --token-color-neutral: var(--primitive-neutral);
+  --token-color-neutral-light: var(--primitive-neutral-light);
+  --token-color-neutral-dark: var(--primitive-neutral-dark);
+  
+  --token-color-surface: var(--primitive-surface);
+  --token-color-surface-elevated: var(--primitive-surface-elevated);
+  --token-color-background: var(--primitive-background);
+  
+  --token-color-text-primary: var(--primitive-text-primary);
+  --token-color-text-secondary: var(--primitive-text-secondary);
+  --token-color-text-muted: var(--primitive-text-muted);
+  
+  --token-color-border: var(--primitive-border);
+  --token-color-border-light: var(--primitive-border-light);
+  --token-color-border-strong: var(--primitive-border-strong);
+  
+  --token-color-success: var(--primitive-success);
+  --token-color-error: var(--primitive-error);
+  --token-color-warning: var(--primitive-warning);
+  --token-color-info: var(--primitive-info);
+  
+  /* Typography - Semantic naming */
+  --token-font-family-primary: var(--primitive-font-primary);
+  --token-font-family-secondary: var(--primitive-font-secondary);
+  --token-font-family-mono: var(--primitive-font-mono);
+  
+  --token-font-weight-light: var(--primitive-font-weight-light);
+  --token-font-weight-normal: var(--primitive-font-weight-normal);
+  --token-font-weight-medium: var(--primitive-font-weight-medium);
+  --token-font-weight-semibold: var(--primitive-font-weight-semibold);
+  --token-font-weight-bold: var(--primitive-font-weight-bold);
+  
+  --token-text-size-xs: var(--primitive-text-xs);
+  --token-text-size-sm: var(--primitive-text-sm);
+  --token-text-size-base: var(--primitive-text-base);
+  --token-text-size-lg: var(--primitive-text-lg);
+  --token-text-size-xl: var(--primitive-text-xl);
+  --token-text-size-2xl: var(--primitive-text-2xl);
+  --token-text-size-3xl: var(--primitive-text-3xl);
+  --token-text-size-4xl: var(--primitive-text-4xl);
+  --token-text-size-5xl: var(--primitive-text-5xl);
+  
+  --token-line-height-tight: var(--primitive-leading-tight);
+  --token-line-height-normal: var(--primitive-leading-normal);
+  --token-line-height-relaxed: var(--primitive-leading-relaxed);
+  
+  /* Spacing - Semantic naming */
+  --token-space-xs: var(--primitive-space-1);
+  --token-space-sm: var(--primitive-space-2);
+  --token-space-md: var(--primitive-space-4);
+  --token-space-lg: var(--primitive-space-6);
+  --token-space-xl: var(--primitive-space-8);
+  --token-space-2xl: var(--primitive-space-12);
+  --token-space-3xl: var(--primitive-space-16);
+  --token-space-4xl: var(--primitive-space-20);
+  
+  /* Border Radius - Semantic naming */
+  --token-radius-none: var(--primitive-radius-none);
+  --token-radius-sm: var(--primitive-radius-sm);
+  --token-radius-base: var(--primitive-radius-base);
+  --token-radius-md: var(--primitive-radius-md);
+  --token-radius-lg: var(--primitive-radius-lg);
+  --token-radius-xl: var(--primitive-radius-xl);
+  --token-radius-full: var(--primitive-radius-full);
+  
+  /* Borders - Semantic naming */
+  --token-border-width-thin: var(--primitive-border-1);
+  --token-border-width-base: var(--primitive-border-2);
+  --token-border-width-thick: var(--primitive-border-4);
+  
+  /* Shadows - Semantic naming */
+  --token-shadow-sm: var(--primitive-shadow-sm);
+  --token-shadow-base: var(--primitive-shadow-base);
+  --token-shadow-md: var(--primitive-shadow-md);
+  --token-shadow-lg: var(--primitive-shadow-lg);
+  --token-shadow-xl: var(--primitive-shadow-xl);
+  
+  /* Animation - Semantic naming */
+  --token-transition-fast: var(--primitive-duration-fast) var(--primitive-ease-out);
+  --token-transition-base: var(--primitive-duration-base) var(--primitive-ease-in-out);
+  --token-transition-slow: var(--primitive-duration-slow) var(--primitive-ease-in-out);
+  
+  --token-ease-in: var(--primitive-ease-in);
+  --token-ease-out: var(--primitive-ease-out);
+  --token-ease-in-out: var(--primitive-ease-in-out);
+}
+
+/**
+ * PCA Skin Primitives
+ * Professional skincare brand - clinical, sophisticated, trustworthy
+ * Raw values that map to semantic design tokens
+ */
+
+[data-theme="pca"] {
+  /* === COLOR PRIMITIVES === */
+  
+  /* Primary - Professional blue */
+  --primitive-primary: #1e3a8a;
+  --primitive-primary-light: #3b82f6;
+  --primitive-primary-dark: #1e40af;
+  
+  /* Secondary - Clinical navy */
+  --primitive-secondary: #1e3a8a;
+  --primitive-secondary-light: #3b82f6;
+  --primitive-secondary-dark: #172554;
+  
+  /* Accent - Medical teal */
+  --primitive-accent: #0891b2;
+  --primitive-accent-light: #06b6d4;
+  --primitive-accent-dark: #0e7490;
+  
+  /* Neutral - Clinical grays */
+  --primitive-neutral: #6b7280;
+  --primitive-neutral-light: #d1d5db;
+  --primitive-neutral-dark: #374151;
+  
+  /* Surface colors */
+  --primitive-surface: #ffffff;
+  --primitive-surface-elevated: #f9fafb;
+  --primitive-background: #ffffff;
+  
+  /* Text colors */
+  --primitive-text-primary: #111827;
+  --primitive-text-secondary: #4b5563;
+  --primitive-text-muted: #9ca3af;
+  
+  /* Border colors */
+  --primitive-border: #e5e7eb;
+  --primitive-border-light: #f3f4f6;
+  --primitive-border-strong: #d1d5db;
+  
+  /* Status colors */
+  --primitive-success: #059669;
+  --primitive-error: #dc2626;
+  --primitive-warning: #d97706;
+  --primitive-info: #0891b2;
+  
+  /* === TYPOGRAPHY PRIMITIVES === */
+  
+  --primitive-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primitive-font-secondary: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --primitive-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --primitive-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --primitive-font-weight-light: 300;
+  --primitive-font-weight-normal: 400;
+  --primitive-font-weight-medium: 500;
+  --primitive-font-weight-semibold: 600;
+  --primitive-font-weight-bold: 700;
+  
+  --primitive-text-xs: 0.6rem;
+  --primitive-text-sm: 0.7rem;
+  --primitive-text-base: 0.8rem;
+  --primitive-text-lg: 0.9rem;
+  --primitive-text-xl: 1rem;
+  --primitive-text-2xl: 1.1rem;
+  --primitive-text-3xl: 1.3rem;
+  --primitive-text-4xl: 1.5rem;
+  --primitive-text-5xl: 1.8rem;
+  
+  --primitive-leading-tight: 1.1;
+  --primitive-leading-normal: 1.2;
+  --primitive-leading-relaxed: 1.3;
+  
+  /* === SPACING PRIMITIVES === */
+  
+  --primitive-space-1: 0.125rem;
+  --primitive-space-2: 0.25rem;
+  --primitive-space-4: 0.5rem;
+  --primitive-space-6: 0.75rem;
+  --primitive-space-8: 1rem;
+  --primitive-space-12: 1.5rem;
+  --primitive-space-16: 2rem;
+  --primitive-space-20: 2.5rem;
+  
+  /* === BORDER PRIMITIVES === */
+  
+  --primitive-radius-none: 0;
+  --primitive-radius-sm: 0.0625rem;
+  --primitive-radius-base: 0.125rem;
+  --primitive-radius-md: 0.1875rem;
+  --primitive-radius-lg: 0.25rem;
+  --primitive-radius-xl: 0.375rem;
+  --primitive-radius-full: 9999px;
+  
+  --primitive-border-1: 1px;
+  --primitive-border-2: 2px;
+  --primitive-border-4: 4px;
+  
+  /* === SHADOW PRIMITIVES === */
+  
+  --primitive-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --primitive-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --primitive-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --primitive-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --primitive-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* === ANIMATION PRIMITIVES === */
+  
+  --primitive-ease-in: cubic-bezier(0.4, 0.0, 1, 1);
+  --primitive-ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --primitive-ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+  
+  --primitive-duration-fast: 150ms;
+  --primitive-duration-base: 250ms;
+  --primitive-duration-slow: 350ms;
+}
+
+/**
+ * Colgate Primitives
+ * Fresh, clean, approachable oral care brand
+ * Raw values that map to semantic design tokens
+ */
+
+[data-theme="shopsmiles"] {
+  /* === COLOR PRIMITIVES === */
+  
+  /* Primary - Colgate red */
+  --primitive-primary: #dc2626;
+  --primitive-primary-light: #f87171;
+  --primitive-primary-dark: #b91c1c;
+  
+  /* Secondary - Fresh blue */
+  --primitive-secondary: #2563eb;
+  --primitive-secondary-light: #60a5fa;
+  --primitive-secondary-dark: #1e40af;
+  
+  /* Accent - Healthy green */
+  --primitive-accent: #16a34a;
+  --primitive-accent-light: #4ade80;
+  --primitive-accent-dark: #15803d;
+  
+  /* Neutral - Clean, bright */
+  --primitive-neutral: #71717a;
+  --primitive-neutral-light: #d4d4d8;
+  --primitive-neutral-dark: #3f3f46;
+  
+  /* Surface colors */
+  --primitive-surface: #ffffff;
+  --primitive-surface-elevated: #fafafa;
+  --primitive-background: #fefefe;
+  
+  /* Text colors */
+  --primitive-text-primary: #18181b;
+  --primitive-text-secondary: #52525b;
+  --primitive-text-muted: #a1a1aa;
+  
+  /* Border colors */
+  --primitive-border: #e4e4e7;
+  --primitive-border-light: #f4f4f5;
+  --primitive-border-strong: #d4d4d8;
+  
+  /* Status colors */
+  --primitive-success: #16a34a;
+  --primitive-error: #dc2626;
+  --primitive-warning: #ea580c;
+  --primitive-info: #0ea5e9;
+  
+  /* === TYPOGRAPHY PRIMITIVES === */
+  
+  --primitive-font-primary: 'Nunito', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primitive-font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --primitive-font-mono: 'Source Code Pro', 'Fira Code', Consolas, monospace;
+  
+  --primitive-font-weight-light: 300;
+  --primitive-font-weight-normal: 400;
+  --primitive-font-weight-medium: 600;
+  --primitive-font-weight-semibold: 700;
+  --primitive-font-weight-bold: 800;
+  
+  --primitive-text-xs: 0.9rem;
+  --primitive-text-sm: 1.1rem;
+  --primitive-text-base: 1.25rem;
+  --primitive-text-lg: 1.5rem;
+  --primitive-text-xl: 1.75rem;
+  --primitive-text-2xl: 2rem;
+  --primitive-text-3xl: 2.5rem;
+  --primitive-text-4xl: 3rem;
+  --primitive-text-5xl: 4rem;
+  
+  --primitive-leading-tight: 1.4;
+  --primitive-leading-normal: 1.7;
+  --primitive-leading-relaxed: 1.9;
+  
+  /* === SPACING PRIMITIVES === */
+  
+  --primitive-space-1: 0.5rem;
+  --primitive-space-2: 0.75rem;
+  --primitive-space-4: 1.5rem;
+  --primitive-space-6: 2.25rem;
+  --primitive-space-8: 3rem;
+  --primitive-space-12: 4.5rem;
+  --primitive-space-16: 6rem;
+  --primitive-space-20: 7.5rem;
+  
+  /* === BORDER PRIMITIVES === */
+  
+  --primitive-radius-none: 0;
+  --primitive-radius-sm: 0.75rem;
+  --primitive-radius-base: 1rem;
+  --primitive-radius-md: 1.25rem;
+  --primitive-radius-lg: 1.5rem;
+  --primitive-radius-xl: 2rem;
+  --primitive-radius-full: 9999px;
+  
+  --primitive-border-1: 1px;
+  --primitive-border-2: 2px;
+  --primitive-border-4: 4px;
+  
+  /* === SHADOW PRIMITIVES === */
+  
+  --primitive-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --primitive-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --primitive-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --primitive-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --primitive-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* === ANIMATION PRIMITIVES === */
+  
+  --primitive-ease-in: cubic-bezier(0.4, 0.0, 1, 1);
+  --primitive-ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --primitive-ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+  
+  --primitive-duration-fast: 150ms;
+  --primitive-duration-base: 200ms;
+  --primitive-duration-slow: 300ms;
+}
+
+/* Component Base Classes using Design Tokens */
+@layer components {
+  .btn-theme-primary {
+    padding: var(--token-space-md) var(--token-space-lg);
+    font-weight: var(--token-font-weight-medium);
+    transition: var(--token-transition-base);
+    background-color: var(--token-color-primary);
+    color: var(--token-color-surface);
+    border-radius: var(--token-radius-base);
+    font-family: var(--token-font-family-primary);
+    font-size: var(--token-text-size-base);
+    line-height: var(--token-line-height-normal);
+  }
+  
+  .btn-theme-primary:hover {
+    background-color: var(--token-color-primary-dark);
+  }
+  
+  .btn-theme-secondary {
+    padding: var(--token-space-md) var(--token-space-lg);
+    font-weight: var(--token-font-weight-medium);
+    border: var(--token-border-width-thin) solid var(--token-color-secondary);
+    transition: var(--token-transition-base);
+    background-color: transparent;
+    color: var(--token-color-secondary);
+    border-radius: var(--token-radius-base);
+    font-family: var(--token-font-family-primary);
+    font-size: var(--token-text-size-base);
+    line-height: var(--token-line-height-normal);
+  }
+  
+  .btn-theme-secondary:hover {
+    background-color: var(--token-color-secondary-light);
+  }
+  
+  .card-theme {
+    border: var(--token-border-width-thin) solid var(--token-color-border);
+    box-shadow: var(--token-shadow-sm);
+    background-color: var(--token-color-surface);
+    border-radius: var(--token-radius-base);
+    font-family: var(--token-font-family-primary);
+  }
+  
+  .text-theme-primary {
+    color: var(--token-color-primary);
+  }
+  
+  .text-theme-secondary {
+    color: var(--token-color-secondary);
+  }
+  
+  .text-theme-accent {
+    color: var(--token-color-accent);
+  }
+  
+  .bg-theme-primary {
+    background-color: var(--token-color-primary);
+  }
+  
+  .bg-theme-secondary {
+    background-color: var(--token-color-secondary);
+  }
+  
+  .bg-theme-accent {
+    background-color: var(--token-color-accent);
+  }
+
+  /* Additional semantic classes */
+  .text-primary {
+    color: var(--token-color-text-primary);
+    font-family: var(--token-font-family-primary);
+  }
+  
+  .text-secondary {
+    color: var(--token-color-text-secondary);
+    font-family: var(--token-font-family-primary);
+  }
+  
+  .text-muted {
+    color: var(--token-color-text-muted);
+    font-family: var(--token-font-family-primary);
+  }
+  
+  .surface {
+    background-color: var(--token-color-surface);
+  }
+  
+  .surface-elevated {
+    background-color: var(--token-color-surface-elevated);
+    box-shadow: var(--token-shadow-base);
+  }
+}

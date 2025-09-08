@@ -24,8 +24,10 @@
     "src/**/*.ts", 
     "src/**/*.tsx", 
     "src/**/*.vue",
+    "src/types/**/*.d.ts",
     "stories/**/*.ts",
-    "stories/**/*.tsx"
+    "stories/**/*.tsx",
+    "stories/**/*.vue"
   ],
   "exclude": [
     "node_modules"

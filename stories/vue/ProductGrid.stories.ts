@@ -66,7 +66,7 @@ export const ThreeColumns: Story = {
     gap: 'medium',
     responsive: true,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ProductGrid },
     setup() {
       return { args, mockProductCard };
@@ -85,7 +85,7 @@ export const TwoColumns: Story = {
     gap: 'medium',
     responsive: true,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ProductGrid },
     setup() {
       return { args, mockProductCard };
@@ -104,7 +104,7 @@ export const FourColumns: Story = {
     gap: 'medium',
     responsive: true,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ProductGrid },
     setup() {
       return { args, mockProductCard };
@@ -123,7 +123,7 @@ export const SingleColumn: Story = {
     gap: 'large',
     responsive: false,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ProductGrid },
     setup() {
       return { args, mockProductCard };
@@ -149,7 +149,7 @@ export const ResponsiveShowcase: Story = {
       }
     }
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ProductGrid },
     setup() {
       return { args, mockProductCard };

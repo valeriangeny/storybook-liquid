@@ -25,6 +25,9 @@ Storybook will be available at `http://localhost:6006`
 
 ### 🟢 Vue 3 Components
 - **LiquidRenderer**: Wrapper component that renders Liquid templates with reactive data
+- **ThemeButton**: Theme-aware button that adapts to PCA/ShopSmiles styling
+- **ThemeCard**: Product cards with automatic theme adaptation
+- **ThemeNavigation**: Responsive navigation with theme-based colors and fonts
 - **ShopifyButton**: Customizable button with Shopify design system variants  
 - **ProductGrid**: Responsive grid layout for products
 - **Button & Header**: Original Storybook example components (reorganized)
@@ -40,20 +43,27 @@ Storybook will be available at `http://localhost:6006`
 
 ## 🔧 Features
 
-### Liquid Template Support
+### 🎨 Dual Theme System
+- **PCA Theme**: Professional blue colors, Inter font, subtle 4px border radius
+- **ShopSmiles Theme**: Friendly green colors, Nunito font, rounded 12px border radius
+- **Instant Switching**: Theme selector in Storybook toolbar with live preview
+- **CSS Variables**: Clean implementation using custom properties
+
+### 💧 Liquid Template Support
 - Uses LiquidJS engine for Shopify Liquid compatibility
 - Custom filters: `money_without_currency`, `truncate`
 - Support for loops, conditionals, and variables
 - Shopify-style component patterns
 
-### Vue 3 + TypeScript
+### 🟢 Vue 3 + TypeScript + Tailwind
 - Full TypeScript support with proper typing
 - Composition API with `<script setup>`
-- Scoped CSS styling
-- Reactive data binding
+- Tailwind CSS with custom theme configurations
+- Reactive data binding with theme awareness
 
-### Storybook Integration
+### 📚 Storybook Integration
 - Interactive controls for all components
+- Theme selector with live switching
 - Comprehensive documentation with autodocs
 - Multiple story variations per component
 - Responsive design testing
@@ -114,6 +124,48 @@ Components are now organized in the sidebar by:
 - **Liquid Components**: Shopify Liquid templates with data binding  
 - **HTML Components**: Framework-free HTML components with CSS styling
 
+## 🎨 Theme System
+
+### Two Distinct Themes
+
+**🟦 PCA Theme (Professional)**
+- Colors: Professional blue palette (`#2563eb` primary)
+- Typography: Inter font family
+- Borders: 4px border radius (subtle, corporate)
+- Style: Clean, minimal, business-focused
+
+**🟢 ShopSmiles Theme (Friendly)** 
+- Colors: Vibrant green palette (`#22c55e` primary)
+- Typography: Nunito font family  
+- Borders: 12px border radius (rounded, approachable)
+- Style: Warm, inviting, consumer-friendly
+
+### Theme Switching
+Use the 🎨 **Theme selector** in the Storybook toolbar to instantly switch between themes and see all components adapt in real-time.
+
+### Implementation
+```css
+/* CSS Variables enable instant theme switching */
+[data-theme="pca"] {
+  --theme-primary: #2563eb;
+  --theme-font-family: Inter;
+  --theme-border-radius: 4px;
+}
+
+[data-theme="shopsmiles"] {
+  --theme-primary: #22c55e;
+  --theme-font-family: Nunito;
+  --theme-border-radius: 12px;
+}
+```
+
+```vue
+<!-- Components reference theme variables -->
+<button class="bg-[var(--theme-primary)] rounded-[var(--theme-border-radius)]">
+  Themed Button
+</button>
+```
+
 ## 🎯 Example Usage
 
 ### Liquid Template Rendering
@@ -128,6 +180,17 @@ Components are now organized in the sidebar by:
 ### Vue Component Usage
 
 ```vue
+<!-- Theme-aware component -->
+<ThemeButton 
+  variant="primary" 
+  size="large" 
+  :loading="false"
+  @click="handleClick"
+>
+  Add to Cart
+</ThemeButton>
+
+<!-- Original Shopify component -->
 <ShopifyButton 
   variant="primary" 
   size="large" 

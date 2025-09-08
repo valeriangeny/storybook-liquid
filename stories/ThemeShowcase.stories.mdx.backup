@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/blocks';
+import ThemeButton from '../src/components/vue/ThemeButton.vue';
+import ThemeCard from '../src/components/vue/ThemeCard.vue';
+import ThemeNavigation from '../src/components/vue/ThemeNavigation.vue';
+
+<Meta title="Themes/Theme Showcase" />
+
+# Theme System Showcase
+
+This project includes two distinct themes that can be switched via the **Theme selector** in the toolbar (🎨 paintbrush icon).
+
+## 🟦 PCA Theme
+**Professional Corporate Aesthetic**
+- **Primary Color**: Professional Blue (`#2563eb`)
+- **Font**: Inter (clean, corporate)
+- **Border Radius**: 4px (subtle, professional)
+- **Style**: Clean, minimal, business-focused
+
+## 🟢 ShopSmiles Theme  
+**Friendly E-commerce Experience**
+- **Primary Color**: Vibrant Green (`#22c55e`)
+- **Font**: Nunito (warm, friendly)
+- **Border Radius**: 12px (rounded, approachable)  
+- **Style**: Warm, inviting, consumer-friendly
+
+## 🎯 How to Use
+
+1. **Theme Selector**: Click the 🎨 paintbrush icon in the Storybook toolbar
+2. **Switch Themes**: Choose between "PCA Theme" and "ShopSmiles Theme"
+3. **Live Preview**: Watch all components update instantly
+
+## 🧩 Themed Components
+
+### ThemeButton
+Buttons that adapt colors, fonts, and styling based on the active theme.
+
+### ThemeCard  
+Product cards with theme-aware pricing, typography, and layout.
+
+### ThemeNavigation
+Responsive navigation bars that match the theme's design language.
+
+## 💡 Implementation
+
+Themes use CSS custom properties (variables) to enable instant switching:
+
+```css
+[data-theme="pca"] {
+  --theme-primary: #2563eb;
+  --theme-font-family: Inter;
+  --theme-border-radius: 4px;
+}
+
+[data-theme="shopsmiles"] {
+  --theme-primary: #22c55e;  
+  --theme-font-family: Nunito;
+  --theme-border-radius: 12px;
+}
+```
+
+Components reference these variables:
+```vue
+<button class="bg-[var(--theme-primary)] rounded-[var(--theme-border-radius)]">
+  Click Me
+</button>
+```
+
+## 🚀 Try It Now
+
+Navigate to any component story and use the theme selector to see the visual differences. 
+
+**Recommended stories to explore:**
+- Vue Components → ThemeButton → Theme Comparison
+- Vue Components → ThemeCard → Theme Showcase  
+- Vue Components → ThemeNavigation → Theme Showcase

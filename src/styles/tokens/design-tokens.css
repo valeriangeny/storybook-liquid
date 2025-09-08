@@ -1,0 +1,108 @@
+/**
+ * Universal Design Tokens
+ * Semantic token names used by all themes
+ * These tokens remain consistent across themes but map to different primitive values
+ */
+
+:root {
+  /* === SEMANTIC DESIGN TOKENS === */
+  
+  /* Colors - Semantic naming */
+  --token-color-primary: var(--primitive-primary);
+  --token-color-primary-light: var(--primitive-primary-light);
+  --token-color-primary-dark: var(--primitive-primary-dark);
+  
+  --token-color-secondary: var(--primitive-secondary);
+  --token-color-secondary-light: var(--primitive-secondary-light);
+  --token-color-secondary-dark: var(--primitive-secondary-dark);
+  
+  --token-color-accent: var(--primitive-accent);
+  --token-color-accent-light: var(--primitive-accent-light);
+  --token-color-accent-dark: var(--primitive-accent-dark);
+  
+  --token-color-neutral: var(--primitive-neutral);
+  --token-color-neutral-light: var(--primitive-neutral-light);
+  --token-color-neutral-dark: var(--primitive-neutral-dark);
+  
+  --token-color-surface: var(--primitive-surface);
+  --token-color-surface-elevated: var(--primitive-surface-elevated);
+  --token-color-background: var(--primitive-background);
+  
+  --token-color-text-primary: var(--primitive-text-primary);
+  --token-color-text-secondary: var(--primitive-text-secondary);
+  --token-color-text-muted: var(--primitive-text-muted);
+  
+  --token-color-border: var(--primitive-border);
+  --token-color-border-light: var(--primitive-border-light);
+  --token-color-border-strong: var(--primitive-border-strong);
+  
+  --token-color-success: var(--primitive-success);
+  --token-color-error: var(--primitive-error);
+  --token-color-warning: var(--primitive-warning);
+  --token-color-info: var(--primitive-info);
+  
+  /* Typography - Semantic naming */
+  --token-font-family-primary: var(--primitive-font-primary);
+  --token-font-family-secondary: var(--primitive-font-secondary);
+  --token-font-family-mono: var(--primitive-font-mono);
+  
+  --token-font-weight-light: var(--primitive-font-weight-light);
+  --token-font-weight-normal: var(--primitive-font-weight-normal);
+  --token-font-weight-medium: var(--primitive-font-weight-medium);
+  --token-font-weight-semibold: var(--primitive-font-weight-semibold);
+  --token-font-weight-bold: var(--primitive-font-weight-bold);
+  
+  --token-text-size-xs: var(--primitive-text-xs);
+  --token-text-size-sm: var(--primitive-text-sm);
+  --token-text-size-base: var(--primitive-text-base);
+  --token-text-size-lg: var(--primitive-text-lg);
+  --token-text-size-xl: var(--primitive-text-xl);
+  --token-text-size-2xl: var(--primitive-text-2xl);
+  --token-text-size-3xl: var(--primitive-text-3xl);
+  --token-text-size-4xl: var(--primitive-text-4xl);
+  --token-text-size-5xl: var(--primitive-text-5xl);
+  
+  --token-line-height-tight: var(--primitive-leading-tight);
+  --token-line-height-normal: var(--primitive-leading-normal);
+  --token-line-height-relaxed: var(--primitive-leading-relaxed);
+  
+  /* Spacing - Semantic naming */
+  --token-space-xs: var(--primitive-space-1);
+  --token-space-sm: var(--primitive-space-2);
+  --token-space-md: var(--primitive-space-4);
+  --token-space-lg: var(--primitive-space-6);
+  --token-space-xl: var(--primitive-space-8);
+  --token-space-2xl: var(--primitive-space-12);
+  --token-space-3xl: var(--primitive-space-16);
+  --token-space-4xl: var(--primitive-space-20);
+  
+  /* Border Radius - Semantic naming */
+  --token-radius-none: var(--primitive-radius-none);
+  --token-radius-sm: var(--primitive-radius-sm);
+  --token-radius-base: var(--primitive-radius-base);
+  --token-radius-md: var(--primitive-radius-md);
+  --token-radius-lg: var(--primitive-radius-lg);
+  --token-radius-xl: var(--primitive-radius-xl);
+  --token-radius-full: var(--primitive-radius-full);
+  
+  /* Borders - Semantic naming */
+  --token-border-width-thin: var(--primitive-border-1);
+  --token-border-width-base: var(--primitive-border-2);
+  --token-border-width-thick: var(--primitive-border-4);
+  
+  /* Shadows - Semantic naming */
+  --token-shadow-sm: var(--primitive-shadow-sm);
+  --token-shadow-base: var(--primitive-shadow-base);
+  --token-shadow-md: var(--primitive-shadow-md);
+  --token-shadow-lg: var(--primitive-shadow-lg);
+  --token-shadow-xl: var(--primitive-shadow-xl);
+  
+  /* Animation - Semantic naming */
+  --token-transition-fast: var(--primitive-duration-fast) var(--primitive-ease-out);
+  --token-transition-base: var(--primitive-duration-base) var(--primitive-ease-in-out);
+  --token-transition-slow: var(--primitive-duration-slow) var(--primitive-ease-in-out);
+  
+  --token-ease-in: var(--primitive-ease-in);
+  --token-ease-out: var(--primitive-ease-out);
+  --token-ease-in-out: var(--primitive-ease-in-out);
+}

@@ -36,7 +36,7 @@ export const Primary: Story = {
   args: {
     variant: 'primary',
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ShopifyButton },
     setup() {
       return { args };
@@ -49,7 +49,7 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ShopifyButton },
     setup() {
       return { args };
@@ -62,7 +62,7 @@ export const Outline: Story = {
   args: {
     variant: 'outline',
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ShopifyButton },
     setup() {
       return { args };
@@ -75,7 +75,7 @@ export const Text: Story = {
   args: {
     variant: 'text',
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ShopifyButton },
     setup() {
       return { args };
@@ -89,7 +89,7 @@ export const Loading: Story = {
     loading: true,
     variant: 'primary',
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ShopifyButton },
     setup() {
       return { args };
@@ -103,7 +103,7 @@ export const Disabled: Story = {
     disabled: true,
     variant: 'primary',
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ShopifyButton },
     setup() {
       return { args };

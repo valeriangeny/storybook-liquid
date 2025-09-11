@@ -46,6 +46,8 @@
   
   /* Background gradients */
   --token-background-gradient-product: var(--primitive-gradient-subtle);
+  --token-background-gradient-hero: var(--primitive-gradient-hero);
+  --token-background-gradient-warm: var(--primitive-gradient-warm);
   
   /* Typography - Semantic naming */
   --token-font-family-primary: var(--primitive-font-primary);

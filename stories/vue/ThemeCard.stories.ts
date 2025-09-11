@@ -81,53 +81,70 @@ export const ProductGrid: Story = {
   render: () => ({
     components: { ThemeCard },
     template: `
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
-        <ThemeCard
-          title="Wireless Headphones"
-          description="Premium noise-cancelling headphones with superior sound quality"
-          :price="99.99"
-          :compare-at-price="149.99"
-          image-url="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop&crop=center"
-          variant="default"
-        />
-        <ThemeCard
-          title="Gaming Keyboard"
-          description="Mechanical RGB keyboard perfect for gaming and productivity"
-          :price="79.99"
-          :compare-at-price="129.99"
-          image-url="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=300&h=200&fit=crop&crop=center"
-          variant="elevated"
-        />
-        <ThemeCard
-          title="Wireless Mouse"
-          description="Ergonomic design with precision tracking technology"
-          :price="49.99"
-          image-url="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=200&fit=crop&crop=center"
-          variant="outlined"
-        />
-        <ThemeCard
-          title="4K Webcam"
-          description="Ultra HD video calling with auto-focus and noise reduction"
-          :price="89.99"
-          :compare-at-price="119.99"
-          image-url="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=300&h=200&fit=crop&crop=center"
-          variant="default"
-        />
-        <ThemeCard
-          title="Bluetooth Speaker"
-          description="Portable speaker with 360° sound and waterproof design"
-          :price="59.99"
-          image-url="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300&h=200&fit=crop&crop=center"
-          variant="elevated"
-        />
-        <ThemeCard
-          title="Software Bundle"
-          description="Complete productivity suite with cloud sync and collaboration tools"
-          :price="199.99"
-          :compare-at-price="399.99"
-          :show-placeholder="true"
-          variant="outlined"
-        />
+      <div class="space-y-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold mb-4 text-[var(--token-color-text-primary)]">Brand Product Showcase</h3>
+          <p class="text-[var(--token-color-text-secondary)] max-w-2xl mx-auto">
+            Real products from both brands showing how the same component adapts to different contexts - 
+            professional skincare vs. consumer oral care.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
+          <!-- PCA Professional Products -->
+          <ThemeCard
+            title="Vitamin B3 Brightening Serum"
+            description="Professional-grade brightening serum that targets discoloration and promotes an even skin tone with 20% niacinamide."
+            :price="112.00"
+            image-url="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&h=200&fit=crop&crop=center"
+            variant="default"
+          />
+          <ThemeCard
+            title="ExLinea® Peptide Smoothing Serum"
+            description="Advanced peptide technology clinically proven to smooth fine lines and improve skin texture within 28 days."
+            :price="120.00"
+            image-url="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=300&h=200&fit=crop&crop=center"
+            variant="elevated"
+          />
+          <ThemeCard
+            title="Ideal Complex® Revitalizing Eye Gel"
+            description="Comprehensive eye treatment targeting multiple signs of aging around the delicate eye area."
+            :price="89.00"
+            image-url="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=300&h=200&fit=crop&crop=center"
+            variant="outlined"
+          />
+          
+          <!-- ShopSmiles Consumer Products -->
+          <ThemeCard
+            title="Colgate Total Advanced Whitening"
+            description="Breakthrough formula that fights bacteria on teeth, tongue, cheeks, and gums for 12 hours of protection."
+            :price="4.99"
+            image-url="https://images.unsplash.com/photo-1584362917165-526a968579e8?w=300&h=200&fit=crop&crop=center"
+            variant="default"
+          />
+          <ThemeCard
+            title="Colgate Optic White Renewal"
+            description="Removes 10 years of yellow stains when brushing twice daily with hydrogen peroxide whitening."
+            :price="6.49"
+            image-url="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=300&h=200&fit=crop&crop=center"
+            variant="elevated"
+          />
+          <ThemeCard
+            title="Colgate Hum Smart Toothbrush"
+            description="Smart sonic toothbrush with app connectivity for personalized brushing feedback and guidance."
+            :price="89.99"
+            :compare-at-price="119.99"
+            image-url="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=200&fit=crop&crop=center"
+            variant="outlined"
+          />
+        </div>
+        
+        <div class="text-center mt-8">
+          <p class="text-sm text-[var(--token-color-text-muted)] max-w-xl mx-auto">
+            Notice how the same component structure produces dramatically different aesthetics based on the active theme. 
+            Typography, colors, border radius, and spacing all adapt automatically.
+          </p>
+        </div>
       </div>
     `,
   }),
@@ -141,7 +158,7 @@ export const ThemeShowcase: Story = {
     layout: 'padded',
     docs: {
       description: {
-        story: 'Showcase how cards adapt to different themes. Switch between PCA (professional blue) and ShopSmiles (friendly green) themes using the toolbar.'
+        story: 'Showcase how cards adapt to different themes. Switch between PCA (professional blue) and ShopSmiles (friendly red/teal) themes using the toolbar.'
       }
     }
   },
@@ -150,36 +167,84 @@ export const ThemeShowcase: Story = {
     template: `
       <div class="space-y-8">
         <div>
-          <h3 class="text-xl font-bold mb-4 text-[var(--theme-secondary-dark)]">Theme Adaptation Demo</h3>
-          <p class="text-[var(--theme-secondary)] mb-6">
+          <h3 class="text-xl font-bold mb-4 text-[var(--token-color-text-primary)]">Theme Adaptation Demo</h3>
+          <p class="text-[var(--token-color-text-secondary)] mb-6">
             These cards automatically adapt their colors, fonts, and border radius based on the selected theme.
+            Try switching themes in the toolbar to see the transformation.
           </p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ThemeCard
-            title="Default Card"
-            description="Standard card styling with theme-aware colors and typography."
-            :price="99.99"
+            title="Professional Grade Treatment"
+            description="Clinical strength formulation designed for professional results and optimal skin health."
+            :price="112.00"
             :compare-at-price="149.99"
-            image-url="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop&crop=center"
+            image-url="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&h=200&fit=crop&crop=center"
             variant="default"
           />
           <ThemeCard
-            title="Elevated Card"
-            description="Enhanced shadow and rounded corners for premium feel."
-            :price="129.99"
-            image-url="https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=300&h=200&fit=crop&crop=center"
+            title="Family Care Essential"
+            description="Trusted quality for the whole family with convenient delivery options."
+            :price="6.49"
+            image-url="https://images.unsplash.com/photo-1584362917165-526a968579e8?w=300&h=200&fit=crop&crop=center"
             variant="elevated"
           />
           <ThemeCard
-            title="Outlined Card"
-            description="Prominent border using primary theme color."
-            :price="79.99"
-            :compare-at-price="99.99"
-            image-url="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=200&fit=crop&crop=center"
+            title="Advanced Solution"
+            description="Premium formulation with clinically proven ingredients and professional recommendations."
+            :price="89.00"
+            :compare-at-price="119.99"
+            image-url="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=300&h=200&fit=crop&crop=center"
             variant="outlined"
           />
+        </div>
+
+        <!-- Theme-specific styling examples -->
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div data-theme="pca" class="p-6 rounded border">
+            <h4 class="text-lg font-semibold mb-4 text-[var(--token-color-text-primary)]">PCA SKIN® Professional Theme</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Primary Color:</span>
+                <span class="text-[var(--token-color-primary)]">#125ce0</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Font Family:</span>
+                <span class="text-[var(--token-color-text-primary)]">hero-new</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Border Radius:</span>
+                <span class="text-[var(--token-color-text-primary)]">Minimal/Sharp</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Style:</span>
+                <span class="text-[var(--token-color-text-primary)]">Clinical & Professional</span>
+              </div>
+            </div>
+          </div>
+
+          <div data-theme="shopsmiles" class="p-6 rounded border">
+            <h4 class="text-lg font-semibold mb-4 text-[var(--token-color-text-primary)]">ShopSmiles by Colgate Theme</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Primary Color:</span>
+                <span class="text-[var(--token-color-primary)]">#f5010b</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Font Family:</span>
+                <span class="text-[var(--token-color-text-primary)]">Colgate Ready</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Border Radius:</span>
+                <span class="text-[var(--token-color-text-primary)]">Curved/50px</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[var(--token-color-text-secondary)]">Style:</span>
+                <span class="text-[var(--token-color-text-primary)]">Friendly & Approachable</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     `,

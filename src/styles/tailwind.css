@@ -118,53 +118,57 @@
 [data-theme="pca"] {
   /* === COLOR PRIMITIVES === */
   
-  /* Primary - Professional blue */
-  --primitive-primary: #1e3a8a;
+  /* Primary - PCA Professional Blue */
+  --primitive-primary: #125ce0;
   --primitive-primary-light: #3b82f6;
-  --primitive-primary-dark: #1e40af;
+  --primitive-primary-dark: #0e47c7;
   
-  /* Secondary - Clinical navy */
-  --primitive-secondary: #1e3a8a;
-  --primitive-secondary-light: #3b82f6;
-  --primitive-secondary-dark: #172554;
+  /* Secondary - PCA Navy Blue */
+  --primitive-secondary: #304184;
+  --primitive-secondary-light: #4c5a94;
+  --primitive-secondary-dark: #1e2a5a;
   
-  /* Accent - Medical teal */
-  --primitive-accent: #0891b2;
-  --primitive-accent-light: #06b6d4;
-  --primitive-accent-dark: #0e7490;
+  /* Accent - PCA Brand Blue */
+  --primitive-accent: #125ce0;
+  --primitive-accent-light: #4a7fff;
+  --primitive-accent-dark: #0e47c7;
   
-  /* Neutral - Clinical grays */
-  --primitive-neutral: #6b7280;
+  /* Neutral - Professional grays from PCA */
+  --primitive-neutral: #898989;
   --primitive-neutral-light: #d1d5db;
-  --primitive-neutral-dark: #374151;
+  --primitive-neutral-dark: #4d4d4d;
   
   /* Surface colors */
   --primitive-surface: #ffffff;
-  --primitive-surface-elevated: #f9fafb;
+  --primitive-surface-elevated: #f2f5f8;
   --primitive-background: #ffffff;
   
-  /* Text colors */
-  --primitive-text-primary: #111827;
-  --primitive-text-secondary: #4b5563;
-  --primitive-text-muted: #9ca3af;
+  /* Text colors - PCA specific */
+  --primitive-text-primary: #000000;
+  --primitive-text-secondary: #313131;
+  --primitive-text-muted: #898989;
   
-  /* Border colors */
-  --primitive-border: #e5e7eb;
-  --primitive-border-light: #f3f4f6;
-  --primitive-border-strong: #d1d5db;
+  /* Border colors - PCA specific */
+  --primitive-border: #f2f5f8;
+  --primitive-border-light: #f8f8f8;
+  --primitive-border-strong: #898989;
   
   /* Status colors */
-  --primitive-success: #059669;
+  --primitive-success: #16a34a;
   --primitive-error: #dc2626;
   --primitive-warning: #d97706;
-  --primitive-info: #0891b2;
+  --primitive-info: #125ce0;
+  
+  /* PCA Gradients */
+  --primitive-gradient-hero: linear-gradient(284.16deg, #304184 13.78%, #000000 106.38%);
+  --primitive-gradient-subtle: linear-gradient(135deg, #f2f5f8 0%, #ffffff 100%);
   
   /* === TYPOGRAPHY PRIMITIVES === */
   
-  --primitive-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --primitive-font-secondary: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  --primitive-font-primary: 'hero-new', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primitive-font-secondary: 'hero-new', -apple-system, BlinkMacSystemFont, sans-serif;
   --primitive-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-  --primitive-font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --primitive-font-display: 'hero-new', -apple-system, BlinkMacSystemFont, sans-serif;
   
   --primitive-font-weight-light: 300;
   --primitive-font-weight-normal: 400;
@@ -172,39 +176,40 @@
   --primitive-font-weight-semibold: 600;
   --primitive-font-weight-bold: 700;
   
-  --primitive-text-xs: 0.6rem;
-  --primitive-text-sm: 0.7rem;
-  --primitive-text-base: 0.8rem;
-  --primitive-text-lg: 0.9rem;
-  --primitive-text-xl: 1rem;
-  --primitive-text-2xl: 1.1rem;
-  --primitive-text-3xl: 1.3rem;
-  --primitive-text-4xl: 1.5rem;
-  --primitive-text-5xl: 1.8rem;
+  /* PCA Typography Scale */
+  --primitive-text-xs: 0.75rem;    /* 12px */
+  --primitive-text-sm: 0.8125rem;  /* 13px */
+  --primitive-text-base: 0.875rem; /* 14px */
+  --primitive-text-lg: 0.9375rem;  /* 15px */
+  --primitive-text-xl: 1rem;       /* 16px */
+  --primitive-text-2xl: 1.125rem;  /* 18px */
+  --primitive-text-3xl: 1.25rem;   /* 20px */
+  --primitive-text-4xl: 1.5rem;    /* 24px */
+  --primitive-text-5xl: 1.875rem;  /* 30px */
   
-  --primitive-leading-tight: 1.1;
-  --primitive-leading-normal: 1.2;
-  --primitive-leading-relaxed: 1.3;
+  --primitive-leading-tight: 1.25;
+  --primitive-leading-normal: 1.5;
+  --primitive-leading-relaxed: 1.75;
   
   /* === SPACING PRIMITIVES === */
   
-  --primitive-space-1: 0.125rem;
-  --primitive-space-2: 0.25rem;
-  --primitive-space-4: 0.5rem;
-  --primitive-space-6: 0.75rem;
-  --primitive-space-8: 1rem;
-  --primitive-space-12: 1.5rem;
-  --primitive-space-16: 2rem;
-  --primitive-space-20: 2.5rem;
+  --primitive-space-1: 0.25rem;   /* 4px */
+  --primitive-space-2: 0.5rem;    /* 8px */
+  --primitive-space-4: 1rem;      /* 16px */
+  --primitive-space-6: 1.5rem;    /* 24px */
+  --primitive-space-8: 2rem;      /* 32px */
+  --primitive-space-12: 3rem;     /* 48px */
+  --primitive-space-16: 4rem;     /* 64px */
+  --primitive-space-20: 5rem;     /* 80px */
   
   /* === BORDER PRIMITIVES === */
   
   --primitive-radius-none: 0;
-  --primitive-radius-sm: 0.0625rem;
-  --primitive-radius-base: 0.125rem;
-  --primitive-radius-md: 0.1875rem;
-  --primitive-radius-lg: 0.25rem;
-  --primitive-radius-xl: 0.375rem;
+  --primitive-radius-sm: 0.125rem;  /* 2px */
+  --primitive-radius-base: 0.25rem; /* 4px */
+  --primitive-radius-md: 0.5rem;    /* 8px */
+  --primitive-radius-lg: 1rem;      /* 16px */
+  --primitive-radius-xl: 1.5rem;    /* 24px */
   --primitive-radius-full: 9999px;
   
   --primitive-border-1: 1px;
@@ -239,29 +244,29 @@
 [data-theme="shopsmiles"] {
   /* === COLOR PRIMITIVES === */
   
-  /* Primary - Colgate red */
-  --primitive-primary: #dc2626;
-  --primitive-primary-light: #f87171;
-  --primitive-primary-dark: #b91c1c;
+  /* Primary - Colgate bright red */
+  --primitive-primary: #f5010b;
+  --primitive-primary-light: #ff4d54;
+  --primitive-primary-dark: #dc000a;
   
-  /* Secondary - Fresh blue */
-  --primitive-secondary: #2563eb;
-  --primitive-secondary-light: #60a5fa;
-  --primitive-secondary-dark: #1e40af;
+  /* Secondary - Colgate teal/cyan */
+  --primitive-secondary: #1c838a;
+  --primitive-secondary-light: #22a0a8;
+  --primitive-secondary-dark: #156b70;
   
-  /* Accent - Healthy green */
-  --primitive-accent: #16a34a;
-  --primitive-accent-light: #4ade80;
-  --primitive-accent-dark: #15803d;
+  /* Accent - Colgate teal for interactive elements */
+  --primitive-accent: #1c838a;
+  --primitive-accent-light: #22a0a8;
+  --primitive-accent-dark: #156b70;
   
-  /* Neutral - Clean, bright */
+  /* Neutral - Clean, warm grays */
   --primitive-neutral: #71717a;
   --primitive-neutral-light: #d4d4d8;
   --primitive-neutral-dark: #3f3f46;
   
-  /* Surface colors */
+  /* Surface colors - warm cream tones */
   --primitive-surface: #ffffff;
-  --primitive-surface-elevated: #fafafa;
+  --primitive-surface-elevated: #f4ecde;
   --primitive-background: #fefefe;
   
   /* Text colors */
@@ -276,55 +281,60 @@
   
   /* Status colors */
   --primitive-success: #16a34a;
-  --primitive-error: #dc2626;
+  --primitive-error: #8f1f1d;
   --primitive-warning: #ea580c;
-  --primitive-info: #0ea5e9;
+  --primitive-info: #1c838a;
+  
+  /* Colgate Gradients */
+  --primitive-gradient-warm: linear-gradient(180deg, #f4ecde 0%, #f7dec6 100%);
+  --primitive-gradient-subtle: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
   
   /* === TYPOGRAPHY PRIMITIVES === */
   
-  --primitive-font-primary: 'Nunito', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --primitive-font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --primitive-font-primary: 'Colgate Ready', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primitive-font-secondary: 'Colgate Ready', -apple-system, BlinkMacSystemFont, sans-serif;
   --primitive-font-mono: 'Source Code Pro', 'Fira Code', Consolas, monospace;
   
   --primitive-font-weight-light: 300;
   --primitive-font-weight-normal: 400;
-  --primitive-font-weight-medium: 600;
-  --primitive-font-weight-semibold: 700;
-  --primitive-font-weight-bold: 800;
+  --primitive-font-weight-medium: 500;
+  --primitive-font-weight-semibold: 600;
+  --primitive-font-weight-bold: 700;
   
-  --primitive-text-xs: 0.9rem;
-  --primitive-text-sm: 1.1rem;
-  --primitive-text-base: 1.25rem;
-  --primitive-text-lg: 1.5rem;
-  --primitive-text-xl: 1.75rem;
-  --primitive-text-2xl: 2rem;
-  --primitive-text-3xl: 2.5rem;
-  --primitive-text-4xl: 3rem;
-  --primitive-text-5xl: 4rem;
+  /* Colgate Typography Scale */
+  --primitive-text-xs: 0.75rem;    /* 12px */
+  --primitive-text-sm: 0.9375rem;  /* 15px */
+  --primitive-text-base: 1rem;     /* 16px */
+  --primitive-text-lg: 1.125rem;   /* 18px */
+  --primitive-text-xl: 1.25rem;    /* 20px */
+  --primitive-text-2xl: 1.5rem;    /* 24px */
+  --primitive-text-3xl: 1.875rem;  /* 30px */
+  --primitive-text-4xl: 2.25rem;   /* 36px */
+  --primitive-text-5xl: 3rem;      /* 48px */
   
-  --primitive-leading-tight: 1.4;
-  --primitive-leading-normal: 1.7;
-  --primitive-leading-relaxed: 1.9;
+  --primitive-leading-tight: 1.25;
+  --primitive-leading-normal: 1.5;
+  --primitive-leading-relaxed: 1.75;
   
   /* === SPACING PRIMITIVES === */
   
-  --primitive-space-1: 0.5rem;
-  --primitive-space-2: 0.75rem;
-  --primitive-space-4: 1.5rem;
-  --primitive-space-6: 2.25rem;
-  --primitive-space-8: 3rem;
-  --primitive-space-12: 4.5rem;
-  --primitive-space-16: 6rem;
-  --primitive-space-20: 7.5rem;
+  --primitive-space-1: 0.25rem;   /* 4px */
+  --primitive-space-2: 0.5rem;    /* 8px */
+  --primitive-space-4: 1rem;      /* 16px */
+  --primitive-space-6: 1.5rem;    /* 24px */
+  --primitive-space-8: 2rem;      /* 32px */
+  --primitive-space-12: 3rem;     /* 48px */
+  --primitive-space-16: 4rem;     /* 64px */
+  --primitive-space-20: 5rem;     /* 80px */
   
   /* === BORDER PRIMITIVES === */
   
   --primitive-radius-none: 0;
-  --primitive-radius-sm: 0.75rem;
-  --primitive-radius-base: 1rem;
-  --primitive-radius-md: 1.25rem;
-  --primitive-radius-lg: 1.5rem;
-  --primitive-radius-xl: 2rem;
+  --primitive-radius-sm: 0.25rem;    /* 4px */
+  --primitive-radius-base: 0.5rem;   /* 8px */
+  --primitive-radius-md: 1rem;       /* 16px */
+  --primitive-radius-lg: 1.5rem;     /* 24px */
+  --primitive-radius-xl: 3.125rem;   /* 50px - Colgate signature curve */
   --primitive-radius-full: 9999px;
   
   --primitive-border-1: 1px;
@@ -335,7 +345,7 @@
   
   --primitive-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --primitive-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --primitive-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --primitive-shadow-md: 0 4px 10px 0 rgb(0 0 0 / 0.25);
   --primitive-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --primitive-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   
@@ -440,5 +450,217 @@
   .surface-elevated {
     background-color: var(--token-color-surface-elevated);
     box-shadow: var(--token-shadow-base);
+  }
+
+  /* PCA Specific Component Classes */
+  .pca-hero {
+    background: var(--token-background-gradient-hero);
+    color: var(--token-color-surface);
+  }
+  
+  .pca-card {
+    background-color: var(--token-color-surface);
+    border: var(--token-border-width-thin) solid var(--token-color-border);
+    border-radius: var(--token-radius-none);
+    box-shadow: none;
+    overflow: hidden;
+  }
+  
+  .pca-card:hover {
+    box-shadow: var(--token-shadow-md);
+  }
+  
+  .pca-btn-primary {
+    background-color: var(--token-color-primary);
+    color: var(--token-color-surface);
+    border: var(--token-border-width-base) solid var(--token-color-primary);
+    border-radius: var(--token-radius-none);
+    font-family: var(--token-font-family-primary);
+    font-weight: var(--token-font-weight-medium);
+    padding: 10px 16px;
+    transition: var(--token-transition-base);
+  }
+  
+  .pca-btn-primary:hover {
+    background-color: var(--token-color-primary-dark);
+    border-color: var(--token-color-primary-dark);
+  }
+  
+  .pca-btn-secondary {
+    background-color: transparent;
+    color: var(--token-color-primary);
+    border: var(--token-border-width-base) solid var(--token-color-primary);
+    border-radius: var(--token-radius-none);
+    font-family: var(--token-font-family-primary);
+    font-weight: var(--token-font-weight-medium);
+    padding: 10px 16px;
+    transition: var(--token-transition-base);
+  }
+  
+  .pca-btn-secondary:hover {
+    background-color: var(--token-color-primary);
+    color: var(--token-color-surface);
+  }
+  
+  .pca-product-card {
+    border-radius: var(--token-radius-none);
+    border: none;
+    box-shadow: none;
+    background-color: var(--token-color-surface);
+    overflow: hidden;
+    transition: var(--token-transition-base);
+  }
+  
+  .pca-product-card:hover {
+    box-shadow: var(--token-shadow-md);
+  }
+  
+  .pca-product-card__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .pca-product-card__title {
+    font-family: var(--token-font-family-primary);
+    font-size: var(--token-text-size-xl);
+    font-weight: var(--token-font-weight-medium);
+    color: var(--token-color-text-primary);
+    line-height: var(--token-line-height-tight);
+    margin: var(--token-space-md) 0 var(--token-space-sm);
+  }
+  
+  .pca-product-card__price {
+    font-family: var(--token-font-family-primary);
+    font-size: var(--token-text-size-base);
+    font-weight: var(--token-font-weight-normal);
+    color: var(--token-color-text-secondary);
+  }
+  
+  .pca-nav {
+    background-color: var(--token-color-surface);
+    border-bottom: var(--token-border-width-thin) solid var(--token-color-border);
+  }
+  
+  .pca-footer {
+    background-color: var(--token-color-text-primary);
+    color: var(--token-color-surface);
+  }
+
+  /* Colgate/ShopSmiles Specific Component Classes */
+  .colgate-hero {
+    background: var(--token-background-gradient-warm);
+    color: var(--token-color-text-primary);
+  }
+  
+  .colgate-card {
+    background-color: var(--token-color-surface);
+    border: var(--token-border-width-thin) solid var(--token-color-border);
+    border-radius: var(--token-radius-xl);
+    box-shadow: var(--token-shadow-md);
+    overflow: hidden;
+  }
+  
+  .colgate-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--token-shadow-lg);
+    transition: var(--token-transition-base);
+  }
+  
+  .colgate-btn-primary {
+    background-color: var(--token-color-primary);
+    color: var(--token-color-surface);
+    border: var(--token-border-width-base) solid var(--token-color-primary);
+    border-radius: var(--token-radius-full);
+    font-family: var(--token-font-family-primary);
+    font-weight: var(--token-font-weight-medium);
+    font-size: var(--token-text-size-lg);
+    padding: 0.6rem 1rem;
+    transition: var(--token-transition-base);
+  }
+  
+  .colgate-btn-primary:hover {
+    background-color: var(--token-color-primary-dark);
+    border-color: var(--token-color-primary-dark);
+    transform: translateY(-1px);
+  }
+  
+  .colgate-btn-secondary {
+    background-color: transparent;
+    color: var(--token-color-secondary);
+    border: var(--token-border-width-base) solid var(--token-color-secondary);
+    border-radius: var(--token-radius-full);
+    font-family: var(--token-font-family-primary);
+    font-weight: var(--token-font-weight-medium);
+    font-size: var(--token-text-size-lg);
+    padding: 0.6rem 1rem;
+    transition: var(--token-transition-base);
+  }
+  
+  .colgate-btn-secondary:hover {
+    background-color: var(--token-color-secondary);
+    color: var(--token-color-surface);
+    transform: translateY(-1px);
+  }
+  
+  .colgate-product-card {
+    background: var(--token-background-gradient-warm);
+    border-radius: var(--token-radius-xl);
+    border: none;
+    box-shadow: var(--token-shadow-base);
+    overflow: hidden;
+    transition: var(--token-transition-base);
+  }
+  
+  .colgate-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--token-shadow-lg);
+  }
+  
+  .colgate-product-card__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .colgate-product-card__title {
+    font-family: var(--token-font-family-primary);
+    font-size: var(--token-text-size-xl);
+    font-weight: var(--token-font-weight-medium);
+    color: var(--token-color-text-primary);
+    line-height: var(--token-line-height-tight);
+    margin: var(--token-space-md) 0 var(--token-space-sm);
+  }
+  
+  .colgate-product-card__price {
+    font-family: var(--token-font-family-primary);
+    font-size: var(--token-text-size-lg);
+    font-weight: var(--token-font-weight-normal);
+    color: var(--token-color-text-secondary);
+  }
+  
+  .colgate-nav {
+    background-color: var(--token-color-surface);
+    border-bottom: var(--token-border-width-thin) solid var(--token-color-border);
+    box-shadow: var(--token-shadow-sm);
+  }
+  
+  .colgate-footer {
+    background-color: var(--token-color-text-primary);
+    color: var(--token-color-surface);
+  }
+  
+  .colgate-curved-container {
+    border-top-left-radius: var(--token-radius-xl);
+    border-bottom-right-radius: var(--token-radius-xl);
+  }
+  
+  .colgate-badge {
+    background-color: var(--token-color-secondary);
+    color: var(--token-color-surface);
+    border-radius: var(--token-radius-full);
+    font-size: var(--token-text-size-xs);
+    font-weight: var(--token-font-weight-medium);
+    padding: var(--token-space-1) var(--token-space-2);
   }
 }

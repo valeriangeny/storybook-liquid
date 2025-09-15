@@ -1,0 +1,136 @@
+<div class="grid grid-cols-1 xl:grid-cols-2 min-h-screen">
+  <!-- PCA Professional Side -->
+  <div data-theme="pca" class="p-8 bg-[var(--token-color-background)] border-r">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold text-[var(--token-color-text-primary)] mb-6 text-center">
+        {{ pca_title | default: 'PCA SKIN® Professional' }}
+      </h2>
+      
+      <div class="pca-card mb-6">
+        <div class="pca-product-card">
+          <img 
+            src="{{ pca_product.image | default: '/api/placeholder/300/200' }}" 
+            alt="{{ pca_product.title }}"
+            class="pca-product-card__image"
+          />
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="pca-product-card__title">{{ pca_product.title }}</h3>
+              <span class="bg-[var(--token-color-primary)] text-[var(--token-color-surface)] px-2 py-1 text-xs rounded">
+                {{ pca_product.badge | default: 'Rx Only' }}
+              </span>
+            </div>
+            <p class="text-sm text-[var(--token-color-text-secondary)] mb-4">
+              {{ pca_product.description }}
+            </p>
+            
+            <!-- Clinical Information -->
+            {% if pca_product.clinical_results or pca_product.professional_note %}
+              <div class="bg-[var(--token-color-surface-elevated)] rounded p-3 mb-4">
+                {% if pca_product.clinical_results %}
+                  <p class="text-xs text-[var(--token-color-text-muted)] mb-2">
+                    <strong>Clinical Results:</strong> {{ pca_product.clinical_results }}
+                  </p>
+                {% endif %}
+                {% if pca_product.professional_note %}
+                  <p class="text-xs text-[var(--token-color-text-muted)]">
+                    <strong>Professional Note:</strong> {{ pca_product.professional_note }}
+                  </p>
+                {% endif %}
+              </div>
+            {% endif %}
+            
+            <div class="pca-product-card__price text-xl font-semibold mb-4">{{ pca_product.price }}</div>
+            
+            <div class="space-y-2">
+              <button class="pca-btn-primary w-full">
+                {{ pca_primary_button | default: 'Find Licensed Provider' }}
+              </button>
+              <button class="pca-btn-secondary w-full text-sm">
+                {{ pca_secondary_button | default: 'Download Clinical Study' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {% if pca_notice %}
+        <div class="bg-[var(--token-color-surface-elevated)] border-l-4 border-[var(--token-color-primary)] p-4 rounded">
+          <p class="text-sm text-[var(--token-color-text-secondary)]">
+            <strong>{{ pca_notice.title | default: 'Professional Consultation Required:' }}</strong> {{ pca_notice.text }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- ShopSmiles Consumer Side -->
+  <div data-theme="shopsmiles" class="p-8 bg-[var(--token-color-background)]">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-2xl font-bold text-[var(--token-color-text-primary)] mb-6 text-center">
+        {{ shopsmiles_title | default: 'ShopSmiles by Colgate' }}
+      </h2>
+      
+      <div class="colgate-card mb-6">
+        <div class="colgate-product-card">
+          <img 
+            src="{{ shopsmiles_product.image | default: '/api/placeholder/300/200' }}" 
+            alt="{{ shopsmiles_product.title }}"
+            class="colgate-product-card__image"
+          />
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="colgate-product-card__title">{{ shopsmiles_product.title }}</h3>
+              {% if shopsmiles_product.badge %}
+                <span class="colgate-badge">{{ shopsmiles_product.badge }}</span>
+              {% endif %}
+            </div>
+            <p class="text-sm text-[var(--token-color-text-secondary)] mb-4">
+              {{ shopsmiles_product.description }}
+            </p>
+            
+            <!-- Family Features -->
+            {% if shopsmiles_product.family_benefits or shopsmiles_product.customer_rating %}
+              <div class="colgate-curved-container p-3 mb-4" style="background: var(--token-background-gradient-warm);">
+                {% if shopsmiles_product.family_benefits %}
+                  <p class="text-xs text-[var(--token-color-text-secondary)] mb-2">
+                    <strong>Family Benefits:</strong> {{ shopsmiles_product.family_benefits }}
+                  </p>
+                {% endif %}
+                {% if shopsmiles_product.customer_rating %}
+                  <p class="text-xs text-[var(--token-color-text-secondary)]">
+                    <strong>Customer Favorite:</strong> {{ shopsmiles_product.customer_rating }}
+                  </p>
+                {% endif %}
+              </div>
+            {% endif %}
+            
+            <div class="colgate-product-card__price text-xl font-semibold mb-2">{{ shopsmiles_product.price }}</div>
+            {% if shopsmiles_product.subscription_price %}
+              <div class="text-sm text-[var(--token-color-secondary)] font-medium mb-4">
+                Save {{ shopsmiles_product.savings | default: '$12' }} with subscription: {{ shopsmiles_product.subscription_price }}
+              </div>
+            {% endif %}
+            
+            <div class="space-y-2">
+              <button class="colgate-btn-primary w-full">
+                {{ shopsmiles_primary_button | default: 'Add to Cart' }}
+              </button>
+              <button class="colgate-btn-secondary w-full text-sm">
+                {{ shopsmiles_secondary_button | default: 'Subscribe & Save 15%' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {% if shopsmiles_notice %}
+        <div class="colgate-curved-container p-4 text-center" style="background: var(--token-background-gradient-warm);">
+          <p class="text-sm text-[var(--token-color-text-secondary)]">
+            {{ shopsmiles_notice.text }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,138 @@
+<div data-theme="shopsmiles" class="bg-[var(--token-color-background)] p-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-[var(--token-color-text-primary)] mb-4" style="font-family: var(--token-font-family-primary)">
+        {{ brand_name | default: 'ShopSmiles by Colgate' }}
+      </h1>
+      <p class="text-lg text-[var(--token-color-text-secondary)] max-w-3xl mx-auto">
+        {{ brand_description | default: 'Fresh, clean oral care products delivered to your door. From the brand dentists recommend most, with convenient subscription options and family-friendly prices.' }}
+      </p>
+    </div>
+
+    <!-- Special Offers Banner -->
+    {% if show_subscription_banner %}
+      <div class="colgate-curved-container p-6 mb-12 text-center" style="background: var(--token-background-gradient-warm);">
+        <h2 class="text-2xl font-bold text-[var(--token-color-text-primary)] mb-2">
+          {{ subscription_title | default: 'Subscribe & Save 15%' }}
+        </h2>
+        <p class="text-[var(--token-color-text-secondary)]">
+          {{ subscription_description | default: 'Free shipping on orders over $25 • Cancel anytime • Skip or modify deliveries' }}
+        </p>
+      </div>
+    {% endif %}
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for product in products %}
+        <div class="colgate-card group">
+          <div class="colgate-product-card h-full">
+            <div class="aspect-square overflow-hidden relative">
+              <img 
+                src="{{ product.image | default: '/api/placeholder/300/300' }}" 
+                alt="{{ product.title }}"
+                class="colgate-product-card__image object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+              />
+              {% if product.badge %}
+                <div class="absolute top-4 left-4">
+                  <span class="colgate-badge">{{ product.badge }}</span>
+                </div>
+              {% endif %}
+            </div>
+            
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="colgate-product-card__title">{{ product.title }}</h3>
+              <p class="text-sm text-[var(--token-color-text-secondary)] mb-4 flex-grow">
+                {{ product.description }}
+              </p>
+              
+              {% if product.rating %}
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="text-yellow-500 text-sm">{{ product.rating }}</div>
+                  {% if product.review_count %}
+                    <span class="text-xs text-[var(--token-color-text-muted)]">({{ product.review_count | number_with_delimiter }} reviews)</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+              
+              <div class="colgate-product-card__price text-xl font-semibold mb-4">{{ product.price }}</div>
+              
+              <!-- Subscription Options -->
+              {% if product.subscription_price and show_subscription %}
+                <div class="bg-[var(--token-color-surface-elevated)] rounded-lg p-3 mb-4">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-[var(--token-color-text-secondary)]">Subscribe & Save:</span>
+                    <span class="text-sm font-semibold text-[var(--token-color-secondary)]">
+                      {{ product.subscription_price }}
+                    </span>
+                  </div>
+                  <p class="text-xs text-[var(--token-color-text-muted)]">{{ subscription_discount | default: '15% off' }} with free delivery</p>
+                </div>
+              {% endif %}
+              
+              <div class="mt-auto space-y-2">
+                <button class="colgate-btn-primary w-full">
+                  {{ primary_button_text | default: 'Add to Cart' }}
+                </button>
+                <button class="colgate-btn-secondary w-full text-sm">
+                  {{ secondary_button_text | default: 'Subscribe & Save 15%' }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Family Pack Promotion -->
+    {% if show_family_promotion %}
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="colgate-card p-8 text-center">
+          <div class="text-6xl mb-4">👨‍👩‍👧‍👦</div>
+          <h3 class="text-2xl font-bold text-[var(--token-color-text-primary)] mb-2">
+            {{ family_pack_title | default: 'Family Pack Savings' }}
+          </h3>
+          <p class="text-[var(--token-color-text-secondary)] mb-6">
+            {{ family_pack_description | default: 'Buy multiple products together and save even more. Perfect for families with different oral care needs.' }}
+          </p>
+          <button class="colgate-btn-primary">
+            {{ family_pack_button_text | default: 'Shop Family Packs' }}
+          </button>
+        </div>
+        
+        <div class="colgate-curved-container p-8 text-center" style="background: var(--token-background-gradient-warm);">
+          <div class="text-6xl mb-4">🎯</div>
+          <h3 class="text-2xl font-bold text-[var(--token-color-text-primary)] mb-2">
+            {{ auto_delivery_title | default: 'Never Run Out Again' }}
+          </h3>
+          <p class="text-[var(--token-color-text-secondary)] mb-6">
+            {{ auto_delivery_description | default: 'Set up automatic deliveries for your favorite products. Skip, modify, or cancel anytime.' }}
+          </p>
+          <button class="colgate-btn-secondary">
+            {{ auto_delivery_button_text | default: 'Learn About Subscriptions' }}
+          </button>
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Customer Testimonials -->
+    {% if testimonials and testimonials.size > 0 %}
+      <div class="mt-12 bg-[var(--token-color-surface-elevated)] rounded-lg p-8">
+        <h3 class="text-2xl font-bold text-[var(--token-color-text-primary)] text-center mb-8">
+          {{ testimonial_section_title | default: 'What Our Customers Say' }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {% for testimonial in testimonials limit: 3 %}
+            <div class="text-center">
+              <div class="text-yellow-500 text-xl mb-2">{{ testimonial.rating | default: '★★★★★' }}</div>
+              <p class="text-[var(--token-color-text-secondary)] mb-3">
+                "{{ testimonial.text }}"
+              </p>
+              <p class="text-sm font-semibold text-[var(--token-color-text-primary)]">- {{ testimonial.author }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>

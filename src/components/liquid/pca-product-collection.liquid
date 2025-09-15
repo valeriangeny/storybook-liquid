@@ -1,0 +1,83 @@
+<div data-theme="pca" class="bg-[var(--token-color-background)] p-8">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-[var(--token-color-text-primary)] mb-4" style="font-family: var(--token-font-family-primary)">
+        {{ brand_name | default: 'PCA SKIN®' }} Professional Products
+      </h1>
+      <p class="text-lg text-[var(--token-color-text-secondary)] max-w-3xl mx-auto">
+        {{ brand_description | default: 'Clinically-proven skincare solutions available exclusively through licensed professionals. Each product is formulated with pharmaceutical-grade ingredients for optimal results.' }}
+      </p>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for product in products %}
+        <div class="pca-card group">
+          <div class="pca-product-card h-full">
+            <div class="aspect-square overflow-hidden relative">
+              <img 
+                src="{{ product.image | default: '/api/placeholder/300/300' }}" 
+                alt="{{ product.title }}"
+                class="pca-product-card__image object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+              />
+              <div class="absolute top-4 left-4">
+                <span class="bg-[var(--token-color-primary)] text-[var(--token-color-surface)] px-2 py-1 text-xs font-medium rounded">
+                  {{ product.badge | default: 'Professional Only' }}
+                </span>
+              </div>
+            </div>
+            
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="pca-product-card__title">{{ product.title }}</h3>
+              <p class="text-sm text-[var(--token-color-text-secondary)] mb-4 flex-grow">
+                {{ product.description }}
+              </p>
+              
+              {% if product.ingredients or product.skin_concern %}
+                <div class="space-y-2 mb-4">
+                  {% if product.ingredients %}
+                    <p class="text-xs text-[var(--token-color-text-muted)]">
+                      <strong>Key Ingredients:</strong> {{ product.ingredients }}
+                    </p>
+                  {% endif %}
+                  {% if product.skin_concern %}
+                    <p class="text-xs text-[var(--token-color-text-muted)]">
+                      <strong>Targets:</strong> {{ product.skin_concern }}
+                    </p>
+                  {% endif %}
+                </div>
+              {% endif %}
+              
+              <div class="pca-product-card__price text-xl font-semibold mb-4">{{ product.price }}</div>
+              
+              <div class="mt-auto">
+                <button class="pca-btn-primary w-full mb-2">
+                  {{ primary_button_text | default: 'Find a Professional' }}
+                </button>
+                <button class="pca-btn-secondary w-full text-sm">
+                  {{ secondary_button_text | default: 'View Clinical Data' }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Professional Notice -->
+    {% if show_professional_notice %}
+      <div class="mt-12 bg-[var(--token-color-surface-elevated)] border-l-4 border-[var(--token-color-primary)] p-6 rounded">
+        <h3 class="text-lg font-semibold text-[var(--token-color-text-primary)] mb-2">
+          {{ notice_title | default: 'Professional Products Notice' }}
+        </h3>
+        <p class="text-[var(--token-color-text-secondary)] mb-4">
+          {{ notice_text | default: 'PCA SKIN® products are available exclusively through licensed skincare professionals. A professional consultation is recommended to determine the best treatment plan for your specific skin needs.' }}
+        </p>
+        <button class="pca-btn-primary">
+          {{ notice_button_text | default: 'Locate a Licensed Professional' }}
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</div>
